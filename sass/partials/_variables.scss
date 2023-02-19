@@ -1,0 +1,21 @@
+//breakpoint:
+$medium:768px;
+
+
+//colors:
+$prymaryColor: rgb(20, 37, 36);
+$secondaryColor: #eefeff;
+$thirdcolor:#001211;
+$forthcolor:#00a1ab;
+
+//Fakeselector:
+%basicFlexboxRules{
+    display: flex;
+    align-items: center;
+}
+%basicMobileText{
+    text-align: center;
+}
+%basicMargin{
+    margin: 10px;
+}

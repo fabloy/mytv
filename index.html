@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My TV</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+</head>
+<body>
+    <main>
+     <nav>
+      <div>
+       <h1>My TV</h1>
+      </div>
+    </nav>
+    <section id="startPage">
+      <h2>Benvenuto in <span>MyTv</span> la tua webTV personalizzata</h2>
+      <button id="startButton">
+        Start the experience
+      </button>
+    </section>
+   
+     <section id="topSection">
+        <div id="insertFilmText"> 
+            <h3>Inserisci un titolo di un film</h3>
+        </div>
+        <form action="">
+         <input type="text" id="name" placeholder="Titolo film">
+         <ul id="listNames">
+         </ul>
+        </form>
+     </section>
+     <section id="downSection">
+      <button class="closeFilmDetail">X</button>
+       <div id="filmSelectedWrapper">
+        </div>
+     </section>
+     <ul class="slideshow">
+      <li><span></span></li>
+      <li><span>2</span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+      <li><span></span></li>
+    </ul>
+    </main>
+    <script type="module" defer src="script/control/main.js"></script>
+</body>
+</html>

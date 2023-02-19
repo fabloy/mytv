@@ -1,0 +1,61 @@
+body{
+    height: 100vh;
+    overflow: hidden;
+    img{
+        border-radius: 10px;
+    }
+    main{
+         #startPage{
+            @extend %basicMobileText;
+            max-width: 100%;
+            background: $secondaryColor;
+            padding: 25px;
+            width: 100vw;
+            height: 90vh;
+            margin-top: 10vh;
+            transition: all .8s;
+            opacity: 1;
+            overflow: hidden;
+            z-index: 100;
+            position: absolute;
+            h2{
+                @extend %basicMargin;
+                color: $thirdcolor;
+                font-size: .9rem;
+                font-weight: 400;
+                margin-top: 20vh;
+                span{
+                    text-transform: uppercase;
+                    display: block;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+            button{
+                @extend %basicMargin;
+                border-radius: 0.37rem;
+                border: solid 0px black;
+                padding: 10px;
+                font-weight: bold;
+                background-color: $forthcolor;
+                color: $secondaryColor;
+                cursor: pointer;
+                transition: background .5s;
+                &:hover{
+                 background-color: $prymaryColor;
+                 color: $forthcolor;
+                }
+            }
+         }
+         @media screen and (min-width: $medium) {
+            #startPage{
+             h2{
+                font-size: 1.2rem;
+             }
+             button{
+                padding: 12px;
+             }
+            }
+         }
+    }
+}

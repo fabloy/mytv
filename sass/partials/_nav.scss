@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    color: $forthcolor;
+    list-style:none;
+}
+::-webkit-scrollbar {
+    width: auto;
+    
+   }
+::-webkit-scrollbar-track {
+    background: auto; 
+    box-shadow: inset 0 0 15px $secondaryColor;
+   }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:  $prymaryColor;
+    border-radius: 2px;
+    max-height: 1px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $forthcolor ; 
+    transition: all .5s;
+   }
+
+body{
+    max-width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+
+    main{
+        @extend %basicFlexboxRules;
+        flex-direction: column;
+        background-color: $thirdcolor;
+        margin: 0 auto;
+        min-height: 100vh;
+        max-width: 100vw;
+     nav{
+        background-color: $prymaryColor;
+        box-shadow: 0px 0px 20px 0px $forthcolor;
+        width: 100%;
+        min-height: 10vh;
+        position: relative;
+        z-index: 101;
+       div{
+        @extend %basicFlexboxRules;
+        flex-direction: row;
+        justify-content: center;
+        flex: 90%;
+        cursor: pointer;
+        
+        &:last-child{
+          flex: 10%;
+          padding: 10px;
+          }
+         h1{
+            @extend %basicMobileText;
+            color: $forthcolor;
+            font-family:'Bebas Neue', cursive;
+            font-size: 3rem;
+            width: 100%;
+            }
+           }
+          }
+      @media screen and (min-width: $medium) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
+        nav{
+          flex: 100vw;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    
+}

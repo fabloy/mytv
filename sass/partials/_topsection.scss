@@ -1,0 +1,106 @@
+body{
+ main{
+    #topSection{
+        @extend %basicFlexboxRules;
+        margin-top: 8vh;
+        flex-direction: column;
+        justify-content: start;
+        background-color: $secondaryColor;
+        border-radius: 15px;
+        box-shadow: 5px 5px 10px 2px $prymaryColor;
+        opacity: 0;
+        transition: width 1s;
+        max-height: 20vh;
+        z-index: 99;
+        div{
+         margin-top: 3rem;
+         width: 70%;
+         opacity: 1;
+         transition: .2s;
+         h3{
+            text-align: center;
+            color: $forthcolor;
+         }
+        }
+    form{
+        @extend %basicMargin;
+        padding: 10px;
+        width: 70%;
+        input{
+         @extend %basicMobileText;
+         padding: .5rem;
+         border: solid 1px $thirdcolor;
+         border-radius: 5px;
+         font-size: 1.4rem;
+         margin: 0 auto ;
+         width: 100%;
+         color: $prymaryColor;
+        }
+          #listNames{
+            min-height: 0px;
+            max-height: 50vh;
+            overflow:auto;
+            transition: max-height 1st;
+            background-color: $secondaryColor;
+            border-radius: 5px;
+            .autocompleteElement{
+                @extend %basicMargin;
+                @extend %basicMobileText;
+                padding-top: 10px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                border-radius: 5px;
+                &:hover{
+                    background-color: $prymaryColor;
+                    transition: .5s
+                }
+            }
+          }
+        };
+        @media screen and (min-width: $medium) {
+          flex: 50%;
+          left: 25%;
+          margin-top: 10vh;
+          min-height: 90vh;
+          background-color: rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px 0px $prymaryColor;
+          border-radius: 0px;
+          position: relative;
+          transition: left .8s;;
+          div{
+            margin-top: 0rem;
+          }
+          #insertFilmText{
+            width: 100%;
+          }
+          form{
+            width: 100%;
+            text-align: center;
+            input{
+              width: 50%;
+              margin: 0 auto;
+              display: inline-block;
+              padding: .2rem;
+              outline: green;
+              border: none;
+              &:focus{
+                box-shadow: inset 0 0 4px 1px $forthcolor
+              }
+            }
+            #listNames{
+              width: 50%;
+              margin: 0 auto;
+              margin-top: 5px;
+              max-height: 55vh;
+              &:hover{box-shadow: inset 0px 0px 4px 0px $forthcolor}
+              .autocompleteElement{
+                padding: 5px;
+                font-size: 1rem;
+              }
+            }
+          }
+          
+        }
+     }
+ }
+}
